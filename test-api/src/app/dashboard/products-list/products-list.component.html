@@ -1,0 +1,18 @@
+<mat-card class="div_card">
+  <mat-card-header color="primary" class="text-center">
+    Products
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        *ngFor="let data of listData"
+        (click)="selectedItem(data)"
+      >
+        <div>{{ data.name }}</div>
+        <span class="example-spacer"></span>
+        <div>&nbsp;&#36;{{ data.price }}</div>
+      </a>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

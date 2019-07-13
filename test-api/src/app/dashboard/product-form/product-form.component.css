@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.div_footer {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.div_footer button {
+  margin-right: 15px;
+}

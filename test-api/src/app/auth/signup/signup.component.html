@@ -1,0 +1,58 @@
+<app-header btnText="Login" (click)="navigate()"></app-header>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Signup</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <table cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Username"
+                [(ngModel)]="username"
+                name="username"
+                required
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                [(ngModel)]="email"
+                name="email"
+                required
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                [(ngModel)]="password"
+                type="password"
+                name="password"
+                required
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="signupProcess()" color="primary">
+      Login
+    </button>
+  </mat-card-actions>
+</mat-card>

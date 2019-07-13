@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="div_toolbar">
+  <mat-toolbar-row>
+    <span>Product Manager</span>
+    <span class="example-spacer"></span>
+    <button mat-button (click)="logout()">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="row container-fluid">
+  <div class="col-md-4">
+    <app-products-list
+      [listData]="productList"
+      (Item)="selectedItem($event)"
+    ></app-products-list>
+  </div>
+  <div class="col-md-8">
+    <app-product-count [productCount]="productCount"></app-product-count>
+    <app-product-form
+      [item]="_selectedItem"
+      (dataChange)="updateUI($event)"
+    ></app-product-form>
+  </div>
+</div>

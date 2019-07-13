@@ -1,0 +1,61 @@
+<form [formGroup]="myForm">
+  <mat-card>
+    <mat-card-header>
+      <div>Product Details</div>
+      <span class="example-spacer"></span>
+      <div *ngIf="item">{{ item.name }} (Product Id : {{ item.id }})</div>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <input
+            type="text"
+            matInput
+            placeholder="Name"
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix>&#36; &nbsp;</mat-icon>
+          <input
+            type="number"
+            matInput
+            placeholder="Price"
+            formControlName="price"
+          />
+        </mat-form-field>
+      </div>
+      <mat-card>
+        <mat-card-header>
+          Rating
+        </mat-card-header>
+        <mat-card-content>
+          <div class="example-container">
+            <mat-form-field class="example-full-width">
+              <input
+                type="number"
+                matInput
+                placeholder="Rating"
+                formControlName="rating"
+              />
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+    <mat-card-footer class="div_footer">
+      <button mat-raised-button color="primary" (click)="addProduct($event)">
+        ADD
+      </button>
+      <button mat-raised-button color="accent" (click)="updateProduct($event)">
+        SAVE
+      </button>
+      <button mat-raised-button color="warn" (click)="deleteProduct($event)">
+        DELETE
+      </button>
+      <button mat-raised-button (click)="cancelProduct()">
+        CANCEL
+      </button>
+    </mat-card-footer>
+  </mat-card>
+</form>
